@@ -1,0 +1,9 @@
+{
+  "/server/": {
+    "target": "http://localhost:80/10_tienda/server",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": { "^/server": "" }
+  }
+}

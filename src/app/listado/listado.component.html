@@ -1,0 +1,11 @@
+<p>listado de productos en venta</p>
+
+<div style="margin: 10px" *ngFor="let elemento of zapatillas">
+  <p class="text-red-600">modelo: {{ elemento.modelo }}</p>
+  talla: {{ elemento.talla }}<br />
+  precio: {{ elemento.precio }}$<br />
+  marca: {{ elemento.marca }}<br />
+  sexo: {{ elemento.sexo }}<br />
+  <img height="80" src="server/imagenes/{{ elemento.id }}.png" /> <br />
+  <button>Ver detalles (por hacer)</button>
+</div>
