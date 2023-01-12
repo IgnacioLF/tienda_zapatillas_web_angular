@@ -1,1 +1,15 @@
 <p>zapatilla-detalles works!</p>
+{{ mensaje }}
+<br />
+<div>detalles del producto:</div>
+<div>
+  <b>{{ zapatilla.modelo }}</b>
+</div>
+<img class="h-32" src="/server/imagenes/{{ zapatilla.id }}.png" />
+<div>
+  talla:{{ zapatilla.talla }}<br />
+  precio:{{ zapatilla.precio }}$<br />
+  marca:{{ zapatilla.marca }}<br />
+  sexo: {{ zapatilla.sexo }}<br />
+  <button (click)="agregar_producto_al_carrito()">Agregar al carrito</button>
+</div>
