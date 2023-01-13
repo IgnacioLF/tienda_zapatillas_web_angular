@@ -1,1 +1,10 @@
-<p>carrito works!</p>
+<p>Productos en el carrito</p>
+
+<div class="m-4" *ngFor="let pc of zapatillasCarrito">
+  {{ pc.zapatilla.modelo }}<br />
+  Precio :{{ pc.zapatilla.precio }}<br />
+  Cantidad:{{ pc.cantidad }}
+</div>
+
+<button (click)="vaciarCarrito()">VACIAR CARRITO</button><br />
+<button>REALIZAR PEDIDO</button>

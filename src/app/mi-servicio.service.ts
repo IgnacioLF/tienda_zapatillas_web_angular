@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Zapatilla } from './models/zapatilla';
+import { ZapatillaCarrito } from './models/zapatillaCarrtio';
 
 @Injectable({
   providedIn: 'root',
@@ -28,5 +29,15 @@ export class MiServicioService {
       this.ruta_server + 'agregarProductoCarrito.php',
       { id: idZapatilla, cantidad }
     );
+  }
+
+  obtenerZapatillasCarrito(): Observable<ZapatillaCarrito[]> {
+    return this.http.get<ZapatillaCarrito[]>(
+      this.ruta_server + 'obtenerZapatillasCarrito.php'
+    );
+  }
+
+  vaciarCarrito(): Observable<String> {
+    return this.http.delete<string>(this.ruta_server + 'vaciarCarrito.php');
   }
 }
