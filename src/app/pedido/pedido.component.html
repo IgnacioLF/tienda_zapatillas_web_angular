@@ -1,1 +1,14 @@
-<p>pedido works!</p>
+<div>
+  Rellena los datos de tu pedido:<br />
+  nombre: <input type="text" [(ngModel)]="pedido.nombre" /> <br />
+  apellidos: <input type="text" [(ngModel)]="pedido.apellidos" /> <br />
+  direccion de envio: <input type="text" [(ngModel)]="pedido.direccion" />
+  <br />
+  cp: <input type="text" [(ngModel)]="pedido.cp" /> <br />
+  provincia: <input type="text" [(ngModel)]="pedido.provincia" /> <br />
+  envio: <input type="text" [(ngModel)]="pedido.envio" /> <br />
+  <br />
+  numero de tarjeta de credito:
+  <input type="text" [(ngModel)]="pedido.tarjeta" /><br />
+  <button (click)="finalizarPedido()">Finalizar pedido</button>
+</div>

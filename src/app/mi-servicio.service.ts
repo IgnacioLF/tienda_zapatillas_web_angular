@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { Pedido } from './models/pedido';
 import { Zapatilla } from './models/zapatilla';
 import { ZapatillaCarrito } from './models/zapatillaCarrtio';
 
@@ -39,5 +40,9 @@ export class MiServicioService {
 
   vaciarCarrito(): Observable<String> {
     return this.http.delete<string>(this.ruta_server + 'vaciarCarrito.php');
+  }
+
+  registrarPedido(p: Pedido): Observable<string> {
+    return this.http.post<string>(this.ruta_server + 'registrarPedido.php', p);
   }
 }

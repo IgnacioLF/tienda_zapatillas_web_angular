@@ -12,6 +12,7 @@ export class ZapatillaDetallesComponent {
   id_zapatilla: number = -1;
   zapatilla: Zapatilla = {} as Zapatilla;
   mensaje: String = '';
+  cantidad: number = 1;
 
   constructor(
     private miServicio: MiServicioService,
@@ -28,7 +29,7 @@ export class ZapatillaDetallesComponent {
 
   agregar_producto_al_carrito(): void {
     this.miServicio
-      .agregarAlCarrito(this.id_zapatilla, 1)
+      .agregarAlCarrito(this.id_zapatilla, this.cantidad)
       .subscribe((res) =>
         res == 'ok'
           ? alert('producto agregado al carrito')

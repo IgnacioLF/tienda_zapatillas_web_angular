@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MiServicioService } from '../mi-servicio.service';
 import { ZapatillaCarrito } from '../models/zapatillaCarrtio';
 
@@ -10,7 +11,7 @@ import { ZapatillaCarrito } from '../models/zapatillaCarrtio';
 export class CarritoComponent {
   zapatillasCarrito: ZapatillaCarrito[] = {} as ZapatillaCarrito[];
 
-  constructor(private miServicio: MiServicioService) {}
+  constructor(private miServicio: MiServicioService, private router: Router) {}
 
   ngOnInit(): void {
     this.listarZapatillasCarrito();
@@ -30,5 +31,15 @@ export class CarritoComponent {
           ? (this.zapatillasCarrito = [])
           : alert('No se puedo vaciar el carrito')
       );
+  }
+  realizarPedido(): void {
+    if (
+      this.zapatillasCarrito.length === undefined ||
+      this.zapatillasCarrito.length == 0
+    ) {
+      alert('debes agregar por lo menos un producto al carrito');
+      return;
+    }
+    this.router.navigate(['pedido']);
   }
 }
