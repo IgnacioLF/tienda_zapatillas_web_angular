@@ -1,4 +1,4 @@
-<br />
+<!-- <br />
 <div>detalles del producto:</div>
 <div>
   <b>{{ zapatilla.modelo }}</b>
@@ -11,4 +11,51 @@
   sexo: {{ zapatilla.sexo }}<br />
   cantidad: <input type="number" [(ngModel)]="cantidad" />
   <button (click)="agregar_producto_al_carrito()">Agregar al carrito</button>
+</div> -->
+
+<div class="text-white flex justify-center my-[6.5rem]">
+  <div
+    id="purple_blur_top_left"
+    class="absolute z-[0] top-[10%] left-0 bottom-0 w-[20%] h-[20%] purple__gradient rounded-full"
+  ></div>
+  <div
+    id="cyan_blur_top_left"
+    className="absolute z-[0] top-[40%] right-0 bottom-0 w-[17%] h-[17%] cyan__gradient rounded-full"
+  ></div>
+  <div
+    class="flex justify-center items-center bg-opacity-100 bg-gradient-to-r from-[#2b1046] to-[#003741] rounded-l-3xl max-h-[40rem]"
+  >
+    <img
+      class="lg:w-[30rem] lg:h-[30rem] h-[20rem] w-[20rem] mb-2"
+      alt="imagen zapatilla"
+      src="/server/imagenes/{{ zapatilla.id }}.png"
+    />
+  </div>
+  <div
+    class="lg:min-w-[25rem] min-w-[15rem] flex flex-col items-center justify-evenly bg-black-gradient-2 rounded-r-3xl"
+  >
+    <h1 class="font-bold text-[3rem]">{{ zapatilla.modelo }}</h1>
+    <div class="text-[1.3rem] text-gray-300">
+      <p>descripcion : {{ zapatilla.descripcion }}</p>
+      <p>marca : {{ zapatilla.marca }}</p>
+      <p>talla : {{ zapatilla.talla }}</p>
+      <p>sexo : {{ zapatilla.sexo }}</p>
+    </div>
+    <h2 class="font-semibold text-[2rem]">{{ zapatilla.precio }}$</h2>
+    <label class="flex flex-col">
+      <span class="labelStyles} ml-1">Cantidad</span>
+      <input
+        class="mt-1 rounded-sm text-gray-900 p-1"
+        [(ngModel)]="cantidad"
+        type="number"
+      />
+    </label>
+    <button
+      type="button"
+      (click)="agregar_producto_al_carrito()"
+      class="rounded-lg px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-500 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
+    >
+      Comprar
+    </button>
+  </div>
 </div>

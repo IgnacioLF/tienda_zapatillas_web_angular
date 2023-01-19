@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tienda de zapatillas 👟</title>
   </head>
   <body>
-    <div>Tienda online de zapatillas con angular y php</div>
+    <!--     <div>Tienda online de zapatillas con angular y php</div>
     <div>Parte cliente</div>
     <br />
     <a href="http://localhost/10_tienda/admin/">acceso a administracion</a>
@@ -17,7 +17,74 @@
       <a href="#" routerLink="/listado">VER PRODUCTOS</a><br /><br />
       <a href="#" routerLink="/carrito">VER CARRITO</a><br /><br />
     </div>
+ -->
+    <header class="flex justify-center">
+      <nav
+        class="w-full lg:max-w-[70%] flex justify-around items-center py-5 text-white font-semibold"
+      >
+        <div className="ml-10">
+          <img
+            src="../assets/logo.png"
+            class="h-[3rem]"
+            alt="logo"
+            routerLink="/listado"
+          />
+        </div>
+        <div class="ml-10">
+          <ul class="flex">
+            <li class="mx-3 transition-all hover:text-purple-500">
+              <a class="cursor-pointer" href="http://localhost/10_tienda/admin/"
+                >Administracion</a
+              >
+            </li>
+            <li className="mx-3 transition-all hover:text-purple-500">
+              <a class="cursor-pointer" routerLink="/listado">Productos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center">
+          <div class="mx-3 hover:text-purple-500" routerLink="/carrito">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                d="M1 1.75A.75.75 0 011.75 1h1.628a1.75 1.75 0 011.734 1.51L5.18 3a65.25 65.25 0 0113.36 1.412.75.75 0 01.58.875 48.645 48.645 0 01-1.618 6.2.75.75 0 01-.712.513H6a2.503 2.503 0 00-2.292 1.5H17.25a.75.75 0 010 1.5H2.76a.75.75 0 01-.748-.807 4.002 4.002 0 012.716-3.486L3.626 2.716a.25.25 0 00-.248-.216H1.75A.75.75 0 011 1.75zM6 17.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+            </svg>
+          </div>
+          <div class="mx-3">
+            <button
+              type="button"
+              routerLink="/listado"
+              class="rounded-lg px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-500 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <router-outlet> </router-outlet>
+    <div class="text-white flex flex-col justify-center items-center mb-10">
+      <div
+        id="purple_blur_top_left"
+        class="absolute z-[0] top-[0%] left-0 bottom-0 w-[20%] h-[20%] purple__gradient rounded-full"
+      ></div>
+
+      <div
+        id="cyan_blur_top_right"
+        class="absolute z-[0] top-[40%] right-0 bottom-0 w-[17%] h-[17%] cyan__gradient rounded-full"
+      ></div>
+      <div
+        id="cyan_blur_middle_left"
+        class="absolute z-[0] left-[-10%] top-[82%] bottom-0 w-[17%] h-[17%] cyan__gradient rounded-full"
+      ></div>
+      <div class="flex items-center justify-center">
+        <router-outlet> </router-outlet>
+      </div>
+    </div>
   </body>
 </html>

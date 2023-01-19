@@ -15,6 +15,7 @@
         Modelo: <input type="text" name="modelo" /> <br/>
         Talla: <input type="number" name="talla" /> <br/>
         Marca: <input type="text" name="marca" /> <br/>
+        Descripcion: <input type="text" name="descripcion" /> <br/>
         Sexo: <input type="text" name="sexo" /> <br/>
         Precio: <input type="munber" name="precio" /> <br/>
         Foto: <input type="file" name="foto" /> <br/>
