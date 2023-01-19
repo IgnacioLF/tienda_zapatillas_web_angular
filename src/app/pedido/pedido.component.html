@@ -1,14 +1,22 @@
 <div>
   Rellena los datos de tu pedido:<br />
-  nombre: <input type="text" [(ngModel)]="pedido.nombre" /> <br />
+  nombre: <input type="text" [(ngModel)]="pedido.nombre" />
+  <span [hidden]="nombreOk" style="color: red">error en el nombre</span>
+  <br />
   apellidos: <input type="text" [(ngModel)]="pedido.apellidos" /> <br />
+  <span [hidden]="apellidosOk" style="color: red">error en los apellidos</span>
   direccion de envio: <input type="text" [(ngModel)]="pedido.direccion" />
+  <span [hidden]="direccionOk" style="color: red">error en la direccion</span>
   <br />
   cp: <input type="text" [(ngModel)]="pedido.cp" /> <br />
+  <span [hidden]="cpOk" style="color: red">error en el cp</span>
   provincia: <input type="text" [(ngModel)]="pedido.provincia" /> <br />
+  <span [hidden]="provinciaOk" style="color: red">error en la provincia</span>
   envio: <input type="text" [(ngModel)]="pedido.envio" /> <br />
+  <span [hidden]="envioOk" style="color: red">error en el envio</span>
   <br />
   numero de tarjeta de credito:
   <input type="text" [(ngModel)]="pedido.tarjeta" /><br />
+  <span [hidden]="tarjetaOk" style="color: red">error en la tarjeta</span>
   <button (click)="finalizarPedido()">Finalizar pedido</button>
 </div>

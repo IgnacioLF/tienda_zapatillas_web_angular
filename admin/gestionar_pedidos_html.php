@@ -12,13 +12,30 @@
     pedidos realizados en la tienda    
     </div>
     <?php
+
+        $idpedido = 0;
+        $idpedido_anterior = 0;
         foreach($pedidos as $pedido){
+            $idpedido = $pedido["id"];
+
            ?>
-           <div style="margin:10px">
-            nombre destinatario: <?= $pedido["nombre"] ?> <br>
-            direccion de envio: <?= $pedido["direccion"] ?> <br>
+           <?php if($idpedido!=$idpedido_anterior){ ?>
+                <div style="margin:10px">
+                nombre destinatario: <?= $pedido["nombre"] ?> <br>
+                direccion de envio: <?= $pedido["direccion"] ?> <br>
+                </div>
+                <div style="margin:10px">
+                    productos del pedido:  
+                </div>
+                <?php } ?>
+            <div style="margin:10px">
+                modelo: <?= $pedido["modelo"] ?> <br>
+                talla: <?= $pedido["talla"] ?> <br>
+                precio: <?= $pedido["precio"] ?> <br>
             </div>
+
            <?php 
+           $idpedido_anterior = $idpedido;
         }
     ?>
 </body>
