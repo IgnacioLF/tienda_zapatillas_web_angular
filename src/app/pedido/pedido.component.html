@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   Rellena los datos de tu pedido:<br />
   nombre: <input type="text" [(ngModel)]="pedido.nombre" />
   <span [hidden]="nombreOk" style="color: red">error en el nombre</span>
@@ -19,4 +19,48 @@
   <input type="text" [(ngModel)]="pedido.tarjeta" /><br />
   <span [hidden]="tarjetaOk" style="color: red">error en la tarjeta</span>
   <button (click)="finalizarPedido()">Finalizar pedido</button>
+</div> -->
+
+<div
+  class="rounded-xl mx-auto w-fit mt-10 p-[3px] bg-gradient-to-r from-purple-600 to-cyan-500 mb-10"
+>
+  <div
+    class="flex flex-col items-center w-fit justify-between h-full bg-black-gradient-2 text-white rounded-lg p-6"
+  >
+    <div class="flex items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w-10 h-10 mr-2"
+      >
+        <path
+          fillRule="evenodd"
+          d="M2.5 4A1.5 1.5 0 001 5.5V6h18v-.5A1.5 1.5 0 0017.5 4h-15zM19 8.5H1v6A1.5 1.5 0 002.5 16h15a1.5 1.5 0 001.5-1.5v-6zM3 13.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm4.75-.75a.75.75 0 000 1.5h3.5a.75.75 0 000-1.5h-3.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+
+      <h1 class="font-bold text-[2.5rem]">Realizar pedido</h1>
+    </div>
+    <p class="mb-2 mt-2">Introduce tus datos de envio</p>
+    <div class="w-full flex flex-col justify-center items-center">
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Nombre</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.nombre"
+        />
+      </label>
+      <span [hidden]="nombreOk" style="color: red"> error en el nombre </span>
+      <button
+        (click)="finalizarPedido()"
+        type="button"
+        class="mt-5 px-10 w-fit font-semibold rounded-lg py-2 bg-gradient-to-r from-purple-600 to-cyan-500 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
+      >
+        Realizar pedido
+      </button>
+    </div>
+  </div>
 </div>

@@ -6,12 +6,28 @@ $jsonInfo = json_decode(file_get_contents("php://input"));
 $pedido = R::dispense("pedidos");
 
 $pedido -> nombre = $jsonInfo->nombre;
-$pedido -> direccion = $jsonInfo->direccion;
+$pedido -> direccion = htmlentities($jsonInfo->direccion);
+
+if( preg_match("/^[0-9]{0,30}$/",$jsonInfo->tarjeta)){
+    $pedido->tarjeta = $jsonInfo->tarjeta;
+} else {
+    $pedido->tarjeta = "tarjeta no valida";
+}
+
 $pedido -> tarjeta = $jsonInfo->tarjeta;
 $pedido -> apellidos = $jsonInfo->apellidos;
 $pedido -> cp = $jsonInfo->cp;
 $pedido -> envio = $jsonInfo->envio;
 $pedido -> provincia = $jsonInfo->provincia;
+
+$ip = "";
+if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+    $ip = $_SERVER["HTTP_CLIENT_IP"];
+}else if(!empty($_SERVER["REMOTE_ADDR"])){
+    $ip = $_SERVER["REMOTE_ADDR"];
+}
+$pedido->ip = $ip;
+$pedido->useragent = $_SERVER["HTTP_USER_AGENT"];
 
 $id_generado_pedido = R::store($pedido);
 
