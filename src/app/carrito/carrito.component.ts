@@ -53,4 +53,13 @@ export class CarritoComponent {
           : this.listarZapatillasCarrito()
       );
   }
+
+  onValueChange(event: any, idZapatilla: number): void {
+    let cantidad = event.target.value;
+    if (cantidad > 0) {
+      this.miServicio
+        .actualizarCantidadCarrito(idZapatilla, cantidad)
+        .subscribe((res) => console.log(res));
+    }
+  }
 }

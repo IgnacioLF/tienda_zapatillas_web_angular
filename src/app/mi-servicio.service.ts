@@ -31,6 +31,15 @@ export class MiServicioService {
       { id: idZapatilla, cantidad }
     );
   }
+  actualizarCantidadCarrito(
+    idZapatilla: number,
+    cantidad: number
+  ): Observable<any> {
+    return this.http.post<any>(
+      this.ruta_server + 'actualizarCantidadCarrito.php',
+      { id: idZapatilla, cantidad }
+    );
+  }
 
   obtenerZapatillasCarrito(): Observable<ZapatillaCarrito[]> {
     return this.http.get<ZapatillaCarrito[]>(

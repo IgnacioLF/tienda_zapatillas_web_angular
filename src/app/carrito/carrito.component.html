@@ -34,8 +34,16 @@
         </td>
         <td class="px-4 py-3">{{ pc.zapatilla.modelo }}</td>
         <td class="px-4 py-3 text-white">
-          <div class="w-[5rem] text-center py-2 px-1 rounded-xl font-semibold">
-            {{ pc.cantidad }}
+          <div
+            class="w-[5rem] text-center py-2 px-1 rounded-xl font-semibold text-gray-900"
+          >
+            <input
+              type="number"
+              min="1"
+              value="{{ pc.cantidad }}"
+              (input)="onValueChange($event, pc.zapatilla.id)"
+              class="w-[5rem] text-center py-2 px-1 rounded-xl font-semibold"
+            />
           </div>
         </td>
         <td class="px-4 py-3">{{ pc.zapatilla.precio }}$</td>
