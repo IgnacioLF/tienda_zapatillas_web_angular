@@ -53,7 +53,74 @@
           [(ngModel)]="pedido.nombre"
         />
       </label>
-      <span [hidden]="nombreOk" style="color: red"> error en el nombre </span>
+      <span [hidden]="nombreOk" style="color: red">Error en el nombre </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Apellidos</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.apellidos"
+        />
+      </label>
+      <span [hidden]="apellidosOk" style="color: red"
+        >Error en el los apellidos
+      </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Direccion</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.direccion"
+        />
+      </label>
+      <span [hidden]="direccionOk" style="color: red"
+        >Error en la direccion
+      </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Código postal</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.cp"
+        />
+      </label>
+      <span [hidden]="cpOk" style="color: red">Error en el codigo postal </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Provincia</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.provincia"
+        />
+      </label>
+      <span [hidden]="provinciaOk" style="color: red"
+        >Error en la provincia
+      </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Envio</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.envio"
+        />
+      </label>
+      <span [hidden]="envioOk" style="color: red">Error en el envio </span>
+
+      <label class="font-bold flex flex-col">
+        <span class="ml-1">Número de tarjeta</span>
+        <input
+          class="mt-1 rounded-sm text-gray-900 p-1"
+          type="text"
+          [(ngModel)]="pedido.tarjeta"
+        />
+      </label>
+      <span [hidden]="tarjetaOk" style="color: red">Error en la tarjeta </span>
+
       <button
         (click)="finalizarPedido()"
         type="button"

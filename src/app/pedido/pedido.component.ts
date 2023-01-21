@@ -31,31 +31,32 @@ export class PedidoComponent {
             : alert('no se puedo registrar tu pedido')
         );
     }
+    console.log(this.nombreOk);
   }
 
   validarForm() {
     // validacion de undefined
     if (this.pedido.nombre === undefined) {
-      this.nombreOk = true;
-      return false;
+      this.nombreOk = false;
+      return true;
     } else if (this.pedido.apellidos === undefined) {
-      this.apellidosOk = true;
-      return false;
+      this.apellidosOk = false;
+      return true;
     } else if (this.pedido.direccion === undefined) {
-      this.direccionOk = true;
-      return false;
+      this.direccionOk = false;
+      return true;
     } else if (this.pedido.cp === undefined) {
-      this.cpOk = true;
-      return false;
+      this.cpOk = false;
+      return true;
     } else if (this.pedido.provincia === undefined) {
-      this.provinciaOk = true;
-      return false;
+      this.provinciaOk = false;
+      return true;
     } else if (this.pedido.envio === undefined) {
-      this.envioOk = true;
-      return false;
+      this.envioOk = false;
+      return true;
     } else if (this.pedido.tarjeta === undefined) {
-      this.tarjetaOk = true;
-      return false;
+      this.tarjetaOk = false;
+      return true;
     }
 
     if (/^[a-zA-Z ]{3,20}$/.test(this.pedido.nombre)) {
