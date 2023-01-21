@@ -45,4 +45,11 @@ export class MiServicioService {
   registrarPedido(p: Pedido): Observable<string> {
     return this.http.post<string>(this.ruta_server + 'registrarPedido.php', p);
   }
+
+  eliminarProductoCarrito(id: number): Observable<any> {
+    return this.http.post<any>(
+      this.ruta_server + 'eliminarProductoCarrito.php',
+      { idProducto: id }
+    );
+  }
 }

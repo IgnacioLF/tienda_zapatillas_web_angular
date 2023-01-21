@@ -20,6 +20,7 @@
         <th class="px-4 py-3">Modelo</th>
         <th class="px-4 py-3">Cantidad</th>
         <th class="px-4 py-3">Precio</th>
+        <th class="px-4 py-3">Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -38,6 +39,28 @@
           </div>
         </td>
         <td class="px-4 py-3">{{ pc.zapatilla.precio }}$</td>
+        <td class="px-4 py-3">
+          <button
+            type="button"
+            (click)="eliminarProductoCarrito(pc.zapatilla.id)"
+            class="rounded-lg px-4 py-2 bg-gradient-to-r from-red-500 to-red-800 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="4"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

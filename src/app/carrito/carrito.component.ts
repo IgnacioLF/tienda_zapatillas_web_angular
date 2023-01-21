@@ -42,4 +42,15 @@ export class CarritoComponent {
     }
     this.router.navigate(['pedido']);
   }
+
+  eliminarProductoCarrito(id: number): void {
+    console.log('test ', id);
+    this.miServicio
+      .eliminarProductoCarrito(id)
+      .subscribe((res) =>
+        res == 'vacio'
+          ? (this.zapatillasCarrito = [])
+          : this.listarZapatillasCarrito()
+      );
+  }
 }
