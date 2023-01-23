@@ -6,14 +6,16 @@ import { PedidoComponent } from './pedido/pedido.component';
 import { ZapatillaDetallesComponent } from './zapatilla-detalles/zapatilla-detalles.component';
 
 const routes: Routes = [
-  {path: "listado",component: ListadoComponent},
-  {path: "carrito",component: CarritoComponent},
-  {path: "detalles/:id", component: ZapatillaDetallesComponent},
-  {path: "pedido", component: PedidoComponent}
+  { path: 'listado', component: ListadoComponent },
+  { path: 'carrito', component: CarritoComponent },
+  { path: 'detalles/:id', component: ZapatillaDetallesComponent },
+  { path: 'pedido', component: PedidoComponent },
+  { path: '', redirectTo: '/listado', pathMatch: 'full' },
+  { path: '**', redirectTo: '/listado' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

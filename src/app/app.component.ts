@@ -4,18 +4,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = '10_tienda';
 
-  constructor(private router:Router){
+  constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    // this.router.navigate(["listado"]);
   }
-
-  ngOnInit():void{
-    this.router.navigate(["listado"]);
-  }
-
-
 }

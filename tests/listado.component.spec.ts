@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { serverPrefix } from './constants';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:4200/listado');
+  await page.goto(`${serverPrefix}/listado`);
 });
 
 test('comprobar que se han recibido un listado de zapatillas', async ({
