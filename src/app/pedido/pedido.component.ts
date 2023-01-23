@@ -112,7 +112,7 @@ export class PedidoComponent {
   }
 
   pedidoOk(): void {
-    alert('pedido realizado correctamente');
+    // alert('pedido realizado correctamente');
     this.router.navigate(['listado']);
   }
 }

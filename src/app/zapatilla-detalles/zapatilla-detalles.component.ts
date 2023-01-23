@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MiServicioService } from '../mi-servicio.service';
 import { Zapatilla } from '../models/zapatilla';
 
@@ -16,7 +16,8 @@ export class ZapatillaDetallesComponent {
 
   constructor(
     private miServicio: MiServicioService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +33,7 @@ export class ZapatillaDetallesComponent {
       .agregarAlCarrito(this.id_zapatilla, this.cantidad)
       .subscribe((res) =>
         res == 'ok'
-          ? alert('producto agregado al carrito')
+          ? this.router.navigate(['listado'])
           : alert('no s epudo agregar al carrito')
       );
   }
