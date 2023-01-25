@@ -1,18 +1,3 @@
-<!-- <br />
-<div>detalles del producto:</div>
-<div>
-  <b>{{ zapatilla.modelo }}</b>
-</div>
-<img class="h-32" src="/server/imagenes/{{ zapatilla.id }}.png" />
-<div>
-  talla:{{ zapatilla.talla }}<br />
-  precio:{{ zapatilla.precio }}$<br />
-  marca:{{ zapatilla.marca }}<br />
-  sexo: {{ zapatilla.sexo }}<br />
-  cantidad: <input type="number" [(ngModel)]="cantidad" />
-  <button (click)="agregar_producto_al_carrito()">Agregar al carrito</button>
-</div> -->
-
 <div class="text-white flex justify-center my-[6.5rem]">
   <div
     id="purple_blur_top_left"
@@ -53,7 +38,7 @@
     <button
       type="button"
       (click)="agregar_producto_al_carrito()"
-      class="rounded-lg px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-500 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
+      class="font-bold rounded-lg px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-500 border-2 bg-origin-border border-transparent hover:border-2 hover:border-white hover:text-gray-300"
     >
       Comprar
     </button>

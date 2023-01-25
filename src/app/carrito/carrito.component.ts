@@ -44,7 +44,6 @@ export class CarritoComponent {
   }
 
   eliminarProductoCarrito(id: number): void {
-    console.log('test ', id);
     this.miServicio
       .eliminarProductoCarrito(id)
       .subscribe((res) =>

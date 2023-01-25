@@ -31,6 +31,7 @@ export class MiServicioService {
       { id: idZapatilla, cantidad }
     );
   }
+
   actualizarCantidadCarrito(
     idZapatilla: number,
     cantidad: number
