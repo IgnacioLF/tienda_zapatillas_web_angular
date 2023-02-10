@@ -1,27 +1,16 @@
-# 10Tienda
+# Tienda de zapatillas Angular
+Este proyecto es una versión reducida de [Web_Tienda_Zaparillas](https://github.com/IgnacioLF/Web_Tienda_Zapatillas). 
+La parte de frontend está desarrollada con Angular en Typescript, y para la parte del backend está desarrollada en php usando la librería de RedBeans.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 
-## Development server
+## Descripción
+Al ser una versión reducida solo cuenta con todas las páginas necesarias para poder realizar un pedido. Una principal donde se muestran los productos donde se puede acceder a los detalles del producto que se quiera comprar. Dentro de los detalles del producto se puede añadir al carrito. En la página del carrito podemos gestionarlo y empezar el checkout. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Capturas
+<img src="https://i.imgur.com/T4DPRBj.png">
+<img src="https://i.imgur.com/8sfPfEn.png">
+<img src="https://i.imgur.com/vociOhI.png">
+<img src="https://i.imgur.com/2lYrmGo.png">
